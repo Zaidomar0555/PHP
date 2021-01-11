@@ -66,7 +66,11 @@
                <label for="">Please select a country: </label>
               <select id="country" name="countries" >
                 <option value="" disabled selected>Choose an option</option>
+                <option value="England">England</option>
+                <option value="France">France</option>
+                <option value="Italy">Italy</option>
                 <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Spain">Spain</option>
                 <option value="USA">USA</option>
               </select>
             </div>
@@ -78,9 +82,18 @@
                <label for="">Please select a city: </label>
               <select id="city"  name="cities" >
                 <option value="" disabled selected>Choose an option</option>
-                <option value="Riyadh">Riyadh</option>
-                <option value="Jeddah">Jeddah</option>
-                <option value="San Diego">San Diego</option>
+                <option value="Saudi Arabia">Jeddah</option>
+                <option value="USA">LA</option>
+                <option value="England">London</option>
+                <option value="Spain">Madrid</option>
+                <option value="England">Manchester</option>
+                <option value="Italy">Milan</option>
+                <option value="France">Monaco</option>
+                <option value="Spain">Murcia</option>
+                <option value="France">Paris</option>
+                <option value="Saudi Arabia">Riyadh</option>
+                <option value="Italy">Roma</option>
+                <option value="USA">San Diego</option>
               </select>
             </div>
           </div>
@@ -104,9 +117,9 @@
 
 
        if(isset($_POST['submit'])){
-         if(!empty($_POST['countries'] && $_POST['cities'])){
+         if(!empty($_POST['countries'])){
             $country = $_POST['countries'];
-             $city = $_POST['cities'];
+            // $city = $_POST['cities'];
          }
 
          else{
@@ -123,9 +136,13 @@
        echo "<h2> Username  is ".$username. "</h2><br>";
        echo "<h2> E-Mail Name is ".$email. "</h2><br>";
        echo "<h2> Country Name is ".$country. "</h2><br>";
-        echo "<h2> City Name is ".$city. "</h2><br>";
+
+        //echo "<h2> City Name is ".$city. "</h2><br>";
+
 
      }
      ?>
+
+     <?php  echo "<h2 id='myCountry'> country Selected is :  </h2><br>"; ?>
 </body>
 </html>
