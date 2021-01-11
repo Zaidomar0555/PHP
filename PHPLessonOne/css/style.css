@@ -1,1 +1,14 @@
 /* this is for styling the page */
+
+/* body{
+  background-color: red;
+} */
+.header{
+  text-align: center;
+  color: grey;
+}
+
+.loginpara{
+  text-align: center;
+
+}

@@ -1,0 +1,13 @@
+The Project will contain the following:
+1-HTML
+2-PHP
+3-JAVASCRIPT
+
+
+---
+Build a website that offers the user multiple features. --> The project will be about sport (Soccer/Football).
+a-  The user will be able to navigate through the website easily.
+b - The user will be able to post things
+c - The user will be able to get things from the posts he/she made or from an api/database (optional).
+d - The user will be able to log in using at first email and password , then use the username and password -> maybe it needs a database to do that??? (try without database first and then add database if needed)
+e-
