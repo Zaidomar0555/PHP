@@ -42,7 +42,7 @@
 
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1"> Username</label>
+            <label for="exampleInputEmail1">Username</label>
             <input type="text" class="form-control" name="username" placeholder="Enter Username">
 
           </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="col-lg-5">
                <label for="">Please select a country: </label>
-              <select class="" name="countries">
+              <select id="country" name="countries" >
                 <option value="" disabled selected>Choose an option</option>
                 <option value="Saudi Arabia">Saudi Arabia</option>
                 <option value="USA">USA</option>
@@ -76,7 +76,7 @@
             </div>
             <div class="col-lg-5">
                <label for="">Please select a city: </label>
-              <select class="" name="cities">
+              <select id="city"  name="cities" >
                 <option value="" disabled selected>Choose an option</option>
                 <option value="Riyadh">Riyadh</option>
                 <option value="Jeddah">Jeddah</option>

@@ -1,8 +1,8 @@
 // this is for client side
 $(document).ready(function() {
-    // var changeContent = document.getElementById("idd");
-    // changeContent.textContent = "Hello from cript";
-  
-      console.log("hello");
+  var sel1 = document.querySelector('#country')
+  var sel2 = document.querySelector('#city')
+  var option2 = sel2.querySelectorAll('option');
+
+
   });
-  
