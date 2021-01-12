@@ -22,10 +22,51 @@
         -The first form is if the user does not have an account.
         -The second form is if the user has an account
         - However, the second form will be hidden using simple javascript till the user clicks on a button.
-         - If the user clicks on that button, the first form will be hidden   -->
+         - If the user clicks on that button, the second form will be hidden   -->
         <!-- The from will give the user the ability  -->
 
-    <div class="row">
+<p class="header">If you have already an account, please click <a id="loginButoon" href="#">HERE</a></p>
+  <div id="login" class="row">
+    <div class="col-lg-2">
+
+    </div>
+    <div class="col-lg-8">
+      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text" class="form-control" name="usernameLogin" placeholder="Enter  Username">
+
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Password</label>
+          <input type="text" class="form-control" name="passwordLogin" placeholder="Enter password">
+
+        </div>
+          <a  type="button" id="buttonLogin" type="submit" name="submit" class="btn btn-primary" href="index.php">Submit</a>
+      </form>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+  </div>
+
+  <?php
+
+  if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    $username = $_POST['usernameLogin'];
+    $password = $_POST['passwordLogin'];
+
+    echo "<h2> Username  is ".$username. "</h2><br>";
+    echo "<h2 id='showPass'> The password is ".$password. "</h2><br>";
+
+  }
+   ?>
+
+  <!-- The one below is for registration if the user does not have an account -->
+
+    <div id="signUp"class="row" >
+
       <div class="col-lg-2">
 
       </div>
@@ -106,7 +147,7 @@
      </div>
     </div>
 
-  <p>If you want to your password to be displayed, please click </p>
+
 
     <?php
     // I want to get the info from the form.
@@ -119,10 +160,11 @@
 
 
 
+
        if(isset($_POST['submit'])){
-         if(!empty($_POST['countries'] && $_POST['cities'])){
+         if(!empty($_POST['countries'])){
             $country = $_POST['countries'];
-            $city = $_POST['cities'];
+
           //  $city = $_POST['cities'];
          }
 
@@ -141,10 +183,10 @@
        echo "<h2> Username  is ".$username. "</h2><br>";
        echo "<h2> E-Mail Name is ".$email. "</h2><br>";
 
-       //echo "<p>If you want to your password to be displayed, please click<a id='showMePass' href='#'>HERE</a></p>";
+
        echo "<h2 id='showPass'> The password is ".$password. "</h2><br>";
        echo "<h2> The country selected is: " .$country. "</h2><br>";
-       echo "<h2> The city selected is: " .$city. "</h2><br>";
+
 
 
 
@@ -152,7 +194,9 @@
 
      ?>
 
-    <!-- <h2 id="showCity">   </h2> -->
+    <h2 id="showCity">   </h2>
+
+
 
 </body>
 </html>

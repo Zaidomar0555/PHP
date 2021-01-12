@@ -20,7 +20,7 @@ $("#citiesSelection").hide();
 
 
 
-  $("#button").click(function() {
+  $("#city").change(function() {
                var value = $("#city option:selected");
 
               // var city = value.text();
@@ -31,6 +31,24 @@ $("#citiesSelection").hide();
                 // var getID = document.getElementById("showCity");
                 // getID.textContent = "";
             });
+
+  $("#login").hide();
+
+  $("#loginButoon").click(function(){
+
+         $("#login").show();
+           $("#signUp").hide();
+
+  });
+
+  $("#buttonLogin").click(function(){
+
+
+          window.location.reload();
+
+  });
+
+  button
 
 
   });
