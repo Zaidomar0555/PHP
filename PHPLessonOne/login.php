@@ -69,7 +69,7 @@
                 <option value="England">England</option>
                 <option value="France">France</option>
                 <option value="Italy">Italy</option>
-                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="SaudiArabia">Saudi Arabia</option>
                 <option value="Spain">Spain</option>
                 <option value="USA">USA</option>
               </select>
@@ -78,11 +78,11 @@
             <div class="col-lg-1">
 
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5" id="citiesSelection">
                <label for="">Please select a city: </label>
               <select id="city"  name="cities" >
                 <option value="" disabled selected>Choose an option</option>
-                <option value="Saudi Arabia">Jeddah</option>
+                <option value="SaudiArabia">Jeddah</option>
                 <option value="USA">LA</option>
                 <option value="England">London</option>
                 <option value="Spain">Madrid</option>
@@ -91,20 +91,22 @@
                 <option value="France">Monaco</option>
                 <option value="Spain">Murcia</option>
                 <option value="France">Paris</option>
-                <option value="Saudi Arabia">Riyadh</option>
+                <option value="SaudiArabia">Riyadh</option>
                 <option value="Italy">Roma</option>
                 <option value="USA">San Diego</option>
               </select>
             </div>
           </div>
           </div>
-          <input type="submit" name="submit" class="btn btn-primary">
+          <input id="button" type="submit" name="submit" class="btn btn-primary">
         </form>
       </div>
      <div class="col-lg-2">
 
      </div>
     </div>
+
+  <p>If you want to your password to be displayed, please click </p>
 
     <?php
     // I want to get the info from the form.
@@ -113,13 +115,15 @@
        $lastname = $_POST['lastname'];
        $username = $_POST['username'];
        $email = $_POST['email'];
+       $password = $_POST['password'];
 
 
 
        if(isset($_POST['submit'])){
-         if(!empty($_POST['countries'])){
+         if(!empty($_POST['countries'] && $_POST['cities'])){
             $country = $_POST['countries'];
-            // $city = $_POST['cities'];
+            $city = $_POST['cities'];
+          //  $city = $_POST['cities'];
          }
 
          else{
@@ -131,18 +135,24 @@
 
       $info = array();
 
+
        echo "<h2> First Name is ".$firstname. "</h2><br>";
        echo "<h2> Last Name is ".$lastname. "</h2><br>";
        echo "<h2> Username  is ".$username. "</h2><br>";
        echo "<h2> E-Mail Name is ".$email. "</h2><br>";
-       echo "<h2> Country Name is ".$country. "</h2><br>";
 
-        //echo "<h2> City Name is ".$city. "</h2><br>";
+       //echo "<p>If you want to your password to be displayed, please click<a id='showMePass' href='#'>HERE</a></p>";
+       echo "<h2 id='showPass'> The password is ".$password. "</h2><br>";
+       echo "<h2> The country selected is: " .$country. "</h2><br>";
+       echo "<h2> The city selected is: " .$city. "</h2><br>";
+
 
 
      }
+
      ?>
 
-     <?php  echo "<h2 id='myCountry'> country Selected is :  </h2><br>"; ?>
+    <!-- <h2 id="showCity">   </h2> -->
+
 </body>
 </html>
